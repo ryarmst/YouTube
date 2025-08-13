@@ -1,4 +1,4 @@
-# Redact Browser Extension
+# Redacter Browser Extension
 
 A Firefox extension that helps you redact sensitive information while recording videos. It replaces words you specify with `<redacted>` text on any webpage.
 
@@ -40,5 +40,6 @@ If you have a list of words in a text file (one word per line):
 3. The words get added to your list
 
 ## Testing
+
 
 Open `test_page.html` in Firefox after installing the extension to see it in action.
