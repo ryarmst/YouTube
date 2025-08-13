@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redact Extension Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .instructions {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Redact Extension Test Page</h1>
+    
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Install the Redact Extension in Firefox</li>
+            <li>Click the extension icon and add some sensitive words (like "password", "email", "ssn")</li>
+            <li>Enable redaction</li>
+            <li>Refresh this page to see the words replaced with &lt;redacted&gt;</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>Sample Sensitive Information</h2>
+        <p>Here's some sample content with potentially sensitive information:</p>
+        
+        <ul>
+            <li>My email address is user@example.com</li>
+            <li>My password is "secure123"</li>
+            <li>My SSN is 123-45-6789</li>
+            <li>My credit card number is 4111-1111-1111-1111</li>
+            <li>My phone number is (555) 123-4567</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Dynamic Content Test</h2>
+        <p>This section will have content added dynamically to test real-time redaction:</p>
+        <div id="dynamic-content">
+            <p>Initial content: My API key is "sk-1234567890abcdef"</p>
+        </div>
+        <button onclick="addDynamicContent()">Add More Content</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Case Sensitivity Test</h2>
+        <p>Testing different cases of sensitive words:</p>
+        <ul>
+            <li>PASSWORD (uppercase)</li>
+            <li>Password (title case)</li>
+            <li>password (lowercase)</li>
+            <li>EMAIL vs email vs Email</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Word Boundary Test</h2>
+        <p>Testing word boundaries to ensure only whole words are redacted:</p>
+        <ul>
+            <li>mypassword123 (should not redact "password" part)</li>
+            <li>password123 (should not redact "password" part)</li>
+            <li>my_password (should not redact "password" part)</li>
+            <li>password (should redact this whole word)</li>
+        </ul>
+    </div>
+
+    <script>
+        function addDynamicContent() {
+            const container = document.getElementById('dynamic-content');
+            const newContent = document.createElement('p');
+            newContent.innerHTML = 'New content added: My secret token is "xyz789" and my private key is "pk_abcdef"';
+            container.appendChild(newContent);
+        }
+
+        // Add some dynamic content after a delay
+        setTimeout(function() {
+            const container = document.getElementById('dynamic-content');
+            const delayedContent = document.createElement('p');
+            delayedContent.innerHTML = 'Delayed content: My confidential data is "top_secret_info"';
+            container.appendChild(delayedContent);
+        }, 3000);
+    </script>
+</body>
+</html> 
