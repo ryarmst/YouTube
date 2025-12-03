@@ -1,0 +1,18 @@
+{
+  "persona": {
+    "nombre": "Lucía",
+    "edad": 28,
+    "ciudad": "Madrid",
+    "profesion": "ingeniera",
+    "aficiones": ["lectura", "cocina", "senderismo"]
+  },
+  "configuracion": {
+    "tema": "oscuro",
+    "idioma": "español",
+    "notificaciones": "activadas"
+  },
+  "estado": {
+    "conexion": "en_linea",
+    "dispositivo": "escritorio"
+  }
+}
