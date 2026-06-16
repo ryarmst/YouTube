@@ -1,0 +1,10 @@
+JWT
+application/jwt
+json
+application/json
+jose
+application/jose
+jose+json
+application/jose+json
+octet-stream
+application/octet-stream

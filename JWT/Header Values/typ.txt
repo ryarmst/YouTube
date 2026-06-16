@@ -1,0 +1,16 @@
+JWT
+jwt
+at+jwt
+application/at+jwt
+dpop+jwt
+JOSE
+JOSE+JSON
+secevent+jwt
+logout+jwt
+token-introspection+jwt
+oauth-authz-req+jwt
+vc+sd-jwt
+dc+sd-jwt
+kb+jwt
+entity-statement+jwt
+trust-mark+jwt
