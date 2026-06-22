@@ -43,7 +43,6 @@ client_id
 trust_chain
 peer_trust_chain
 none
-nonce
 ver
 cnf
 tenant
